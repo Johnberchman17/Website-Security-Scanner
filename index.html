@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Security Scanner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🔐 Website Security Scanner</h1>
+
+    <input type="text" id="url" placeholder="Enter website URL">
+
+    <button id="scan">Scan Website</button>
+
+    <div id="results" class="hidden">
+      <h2>Scan Results</h2>
+
+      <p>HTTPS: <span id="https"></span></p>
+      <p>Content Security Policy: <span id="csp"></span></p>
+      <p>X-Frame-Options: <span id="frame"></span></p>
+      <p>X-Content-Type-Options: <span id="content"></span></p>
+
+      <h3>Security Score</h3>
+
+      <div class="meter">
+        <div id="score-bar"></div>
+      </div>
+
+      <p id="score-text"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
