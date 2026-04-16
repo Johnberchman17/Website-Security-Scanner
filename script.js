@@ -28,14 +28,18 @@ function checkHTTPS(url) {
 }
 
 function checkHeaders() {
-  const headers = ["csp", "frame", "content"];
+  const checks = {
+    csp: false,
+    frame: true,
+    content: true
+  };
+
   let score = 0;
 
-  headers.forEach(id => {
+  Object.keys(checks).forEach(id => {
     const element = document.getElementById(id);
-    const random = Math.random() > 0.5;
 
-    if (random) {
+    if (checks[id]) {
       element.textContent = "Present";
       element.style.color = "#00ff99";
       score++;
